@@ -1,0 +1,126 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul li{
+	list-style: none;
+}
+.top i{
+	color: white;	
+}
+.top{
+	background-color: #222222;
+	color: white;
+	width: 100%;
+	overflow: hidden;
+	font-size: 12px;
+	height: 25px;
+}
+.aside{
+	width: 100px;
+	padding: 5px 10px;
+}
+.open{
+	float: left;
+}
+.move{
+	float: right;
+}
+.more{
+	width: 100%;
+	display: none;
+	box-shadow:10px 10px 10px lightgrey;
+	overflow: hidden;
+}
+h4{
+	color: orangered;
+}
+.more p{
+	letter-spacing: 1.5px;
+}
+.content{
+	padding: 0 10px;
+	width: 200px;
+	height: 100px;
+	float: left;
+}
+#nav{
+	width: 100%;
+	height: 70px;
+	box-shadow:10px 10px 10px darkgray;
+}
+.photo{
+	width:220px;
+	margin: 5px 10px;
+}
+.photo img{
+	width: 220px;
+	padding: 5px 10px;
+}
+.phone{
+	overflow: hidden;
+	cursor: pointer;
+}
+.word{
+	float: left;
+	overflow: hidden;
+}
+.word li{
+	float: left;
+	width: 200px;
+	padding: 15px 10px; 
+	font-size: 25px;
+}
+.other:hover,.serve:hover,.shop:hover{
+	color: red;
+	cursor: pointer;
+}
+.word>.other{
+	width: 230px;
+	padding: 10px;
+}
+.other img{
+	width: 50px;
+	height: 50px;
+}
+.word input{
+	width: 500px;
+}
+.way{
+	display: none;
+	width:1200px;
+	z-index: 99999;
+	background-color: whitesmoke;
+	margin: 0 auto;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.way1 {
+	float: left;
+	z-index: 99999;
+	padding: 0 10px;
+	width: 300px;
+}
+.way2 {
+	float: left;
+	z-index: 99999;
+	width: 300px;
+}
+.way3{
+	background-color: lightgrey;
+	width: 300px;
+	z-index: 99999;
+	padding: 0 10px;
+	float: left;
+}
+.way ul li{
+	height:30px;
+}
+.one{
+	font-size:20px ;
+}
+#aa{
+	width: 100%;
+	height: 200px;
+	z-index: -1;
+}
