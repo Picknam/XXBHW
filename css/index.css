@@ -28,7 +28,7 @@ ul li {
 }
 
 .aside {
-	width: 100px;
+	width: 130px;
 	padding: 5px 10px;
 }
 
@@ -62,6 +62,30 @@ ul li {
 	float: left;
 }
 
+.selectWhere-hide{
+    width: 100%;
+    height: 300px;
+    border: 1px solid gray;
+    display: none;
+    font-size: 14px;
+}
+.huaweiGlobalEnglish{
+    margin-left: 6%;;
+    margin-top: 32px;
+}
+.selectWhere-hide ul{
+    list-style: none;
+    width: 88%;
+    margin: 18px auto;
+}
+.selectWhere-hide ul li{
+    display: inline-block;
+    width: 18%;
+    margin-top: 19px;
+}
+.selectWhere-hide ul a{
+    color: black;
+}
 @media screen and (max-width: 968px) {
 	.top {
 		display: none;
@@ -80,7 +104,15 @@ ul li {
 	border-bottom: 1px solid lightgrey;
 	background-color: #F8F8F8;
 }
-
+.hover-up{
+    transition-duration: .5s;
+    transform: rotate(180deg);
+}
+/*图标向下旋转*/
+.hover-down{
+    transition-duration: .5s;
+    transform: rotate(0deg);
+}
 
 /*导航条*/
 
@@ -187,6 +219,89 @@ ul li {
 .mob,
 .mobphone ul li {
 	background-color: lightgray;
+}
+/*导航栏鼠标触碰 手机，笔记本 展现内容*/
+.logoLeft-hide{
+    width: 100%;
+    height: 380px;
+    background-color: #F4F3F0;
+    overflow: hidden;
+    display: none;
+}
+.logoLeft-hidePicture{
+    float: left;
+    margin-left: 7%;
+    width:22%;
+    height: 400px;
+}
+.logoLeft-hidePicture img{
+    margin-top: 40px;
+    width: 250px;
+    height: 270px;
+}
+.knowMore{
+    width: 150px;
+    height: 45px;
+    background-color: coral;
+    border-radius: 7px;
+    border-style: none;
+    color: white;
+    font-size: 19px;
+    margin-left: 130px;
+    margin-top: -40%;
+}
+.hide-tuBiao{
+    float: left;
+    width: 50%;
+    height: 400px;
+}
+.hide-tuBiao ul{
+    list-style: none;
+    width: 100%;
+    height: 150px;
+}
+.hide-tuBiao ul li{
+    display: inline-block;
+    width: 6%;
+    height: 75px;
+    margin: 25px 78px;
+}
+.hide-tuBiao p{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.hide-tuBiao a{
+    text-decoration: none;
+    color: black;
+}
+.hide-tuBiao a:hover{
+    text-decoration: black;
+}
+.hide-tuBiao span{
+    color: palevioletred;
+}
+.hide-help{
+    float: left;
+    width: 21%;
+    height: 400px;
+    line-height: 30px;
+}
+.hide-help p{
+    font-size: 16px;
+    color: black;
+    margin-left: 30px;
+}
+.visit{
+    margin-top: 60px;
+}
+.visit a{
+    text-decoration: none;
+    color: black;
+}
+.visit span{
+    font-size: 15px;
+    margin-left: 7px;
+    color: palevioletred;
 }
 
 
@@ -656,7 +771,9 @@ ul li {
 .morethan {
 	width: 300px;
 }
-
+.morethan h1{
+	padding-left: 20px;
+}
 .banner {
 	width: 900px;
 	height: 400px;

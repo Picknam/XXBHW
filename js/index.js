@@ -1,28 +1,46 @@
-$('.open').click(function() {
+$('.open').hover(function() {
 	$('.more').slideToggle(1000);
+	$('.selectWhere-hide').hide()
+})
+$('.mm').hover(function() {
+	$('.selectWhere-hide').slideToggle(1000);
+	$('.more').hide();
+})
+$('.other').mouseenter(function() {
+	$('.logoLeft-hide').css('display','block');
+	$('.way').css("display", "none");
+})
+$('.logoLeft-hide').mouseleave(function() {
+	$('.logoLeft-hide').css('display','none');
 })
 $('.tach').click(function() {
 	$('.mob').slideToggle(1000);
-	$('.menu').css('height','600px')
+	$('.menu').css('height', '600px')
 })
 $('.touch').click(function() {
 	$('.mobphone').slideToggle(1000);
-	$('.menu').css('height','1200px')
+	$('.menu').css('height', '1200px')
 })
 $('.serve').mouseenter(function() {
 	$('.way').css("display", "block");
-})
-$('.strip').click(function() {
-	$('.menu').animate({"right":"0px"});
-	$('.boo').show();
-})
-$('.boo').click(function() {
-	$('.menu').animate({"right":"-100%"});
-	$('.boo').hide();
+	$('.logoLeft-hide').css('display','none');
 })
 $('.way').mouseleave(function() {
 	$('.way').css("display", "none");
 })
+$('.strip').click(function() {
+	$('.menu').animate({
+		"right": "0px"
+	});
+	$('.boo').show();
+})
+$('.boo').click(function() {
+	$('.menu').animate({
+		"right": "-100%"
+	});
+	$('.boo').hide();
+})
+
 $('.ac').click(function() {
 	$('.yunying,.solve').css("display", "none");
 	$('.qiye').css("display", "block")
@@ -77,6 +95,15 @@ $(function() {
 
 	$(window).on('resize', resize).trigger('resize');
 });
+//图片切换
+$('.open,.mm').hover(function() {
+	/*图标向上旋转*/
+	$('.open>img,.mm>img').addClass('hover-up');
+}, function() {
+	/*图标向下旋转*/
+	$('.open>img,.mm>img').addClass('hover-down');
+});
+//
 $('.people').mouseenter(function() {
 	$('.people>.number>span>i').show();
 })
