@@ -2,7 +2,6 @@
 	margin: 0;
 	padding: 0;
 }
-
 .box input {
 	outline: none;
 }
@@ -92,7 +91,6 @@ ul li {
 	display: block;
 	box-shadow: 2px 2px lightgrey;
 	background-color: white;
-	overflow: hidden;
 	z-index: 999;
 	position: relative;
 }
@@ -148,6 +146,47 @@ ul li {
 	float: right;
 	position: relative;
 	margin-right: 0 10px;
+}
+
+
+/*list*/
+
+.menu ul li {
+	width: 100%;
+	cursor: pointer;
+	border-bottom: 1px solid lightslategray;
+	padding-top: 10px;
+	padding-left: 10px;
+	box-shadow: 2px 2px lightgray;
+	height: 50px;
+}
+.menu ul{
+	width: 100%;
+}
+.menu ul li:hover{
+	color: red;
+}
+.menu {
+	top: 80px;
+	width: 100%;
+	z-index: 99999;
+	background-color: white;
+	position: fixed;
+	right:-100%
+}
+.btn,.delate{
+	width: 80%;
+	margin-left: 10%;
+}
+
+.mob,
+.mobphone {
+	display: none;
+}
+
+.mob,
+.mobphone ul li {
+	background-color: lightgray;
 }
 
 
@@ -270,11 +309,13 @@ ul li {
 .box input {
 	width: 400px;
 }
-@media  screen and (max-width:768px ) {
-	.box input{
+
+@media screen and (max-width:768px) {
+	.box input {
 		width: 200px;
 	}
 }
+
 
 /*头部以下*/
 
@@ -425,6 +466,8 @@ ul li {
 	height: 100px;
 	margin-top: 90px;
 }
+
+
 /*手机*/
 
 .Hua {

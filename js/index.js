@@ -1,8 +1,24 @@
 $('.open').click(function() {
 	$('.more').slideToggle(1000);
 })
+$('.tach').click(function() {
+	$('.mob').slideToggle(1000);
+	$('.menu').css('height','600px')
+})
+$('.touch').click(function() {
+	$('.mobphone').slideToggle(1000);
+	$('.menu').css('height','1200px')
+})
 $('.serve').mouseenter(function() {
 	$('.way').css("display", "block");
+})
+$('.strip').click(function() {
+	$('.menu').animate({"right":"0px"});
+	$('.boo').show();
+})
+$('.boo').click(function() {
+	$('.menu').animate({"right":"-100%"});
+	$('.boo').hide();
 })
 $('.way').mouseleave(function() {
 	$('.way').css("display", "none");
@@ -22,12 +38,12 @@ $('.fc').click(function() {
 $('.search').click(function() {
 	$('.box,.bo').show(1000);
 	$('.other,.serve,.shop').hide();
-	$('.cover').css('display','block')
+	$('.cover').css('display', 'block')
 })
 $('.bo>i').click(function() {
 	$('.box,.bo').hide();
 	$('.other,.serve,.shop').show(1000);
-	$('.cover').css('display','none')
+	$('.cover').css('display', 'none')
 })
 //滚动条监听事件
 
@@ -87,79 +103,79 @@ $(".aboutBranchWebsite>P>i").hide().closest("p").hover(function() {
 
 var i = 0;
 
-			var clone = $(".banner .img li").first().clone(); //克隆第一张图片
-			$(".banner .img").append(clone); //复制到列表最后
-			var size = $(".banner .img li").length;
+var clone = $(".banner .img li").first().clone(); //克隆第一张图片
+$(".banner .img").append(clone); //复制到列表最后
+var size = $(".banner .img li").length;
 
-			for(var j = 0; j < size - 1; j++) {
-				$(".banner .num").append("<li></li>");
-			}
+for(var j = 0; j < size - 1; j++) {
+	$(".banner .num").append("<li></li>");
+}
 
-			$(".banner .num li").first().addClass("on");
+$(".banner .num li").first().addClass("on");
 
-			/*自动轮播*/
+/*自动轮播*/
 
-			var t = setInterval(function() {
-				i++;
-				move();
-			}, 5000);
+var t = setInterval(function() {
+	i++;
+	move();
+}, 5000);
 
-			/*鼠标悬停事件*/
+/*鼠标悬停事件*/
 
-			$(".banner").hover(function() {
-				clearInterval(t); //鼠标悬停时清除定时器
-			}, function() {
-				t = setInterval(function() {
-					i++;
-					move();
-				}, 5000); //鼠标移出时清除定时器
-			});
+$(".banner").hover(function() {
+	clearInterval(t); //鼠标悬停时清除定时器
+}, function() {
+	t = setInterval(function() {
+		i++;
+		move();
+	}, 5000); //鼠标移出时清除定时器
+});
 
-			/*鼠标滑入原点事件*/
+/*鼠标滑入原点事件*/
 
-			$(".banner .num li").hover(function() {
+$(".banner .num li").hover(function() {
 
-				var index = $(this).index(); //获取当前索引值
-				i = index;
-				$(".banner .img").stop().animate({
-					left: -index * 900
-				}, 900);
-				$(this).addClass("on").siblings().removeClass("on");
-			});
+	var index = $(this).index(); //获取当前索引值
+	i = index;
+	$(".banner .img").stop().animate({
+		left: -index * 900
+	}, 900);
+	$(this).addClass("on").siblings().removeClass("on");
+});
 
-			/*向左按钮*/
-			$(".banner .btn_l").click(function() {
-				i++;
-				move();
-			})
+/*向左按钮*/
+$(".banner .btn_l").click(function() {
+	i++;
+	move();
+})
 
-			/*向右按钮*/
-			$(".banner .btn_r").click(function() {
-				i--;
-				move();
-			})
+/*向右按钮*/
+$(".banner .btn_r").click(function() {
+	i--;
+	move();
+})
 
-			/*移动事件*/
-			function move() {
-				if(i == size) {
-					$(".banner .img").css({
-						left: 0
-					});
-					i = 1;
-				}
-				if(i == -1) {
-					$(".banner .img").css({
-						left: -(size - 1) * 900
-					});
-					i = size - 2;
-				}
-				$(".banner .img").stop().animate({
-					left: -i * 900
-				}, 900);
+/*移动事件*/
+function move() {
+	if(i == size) {
+		$(".banner .img").css({
+			left: 0
+		});
+		i = 1;
+	}
+	if(i == -1) {
+		$(".banner .img").css({
+			left: -(size - 1) * 900
+		});
+		i = size - 2;
+	}
+	$(".banner .img").stop().animate({
+		left: -i * 900
+	}, 900);
 
-				if(i == size - 1) {
-					$(".banner .num li").eq(0).addClass("on").siblings().removeClass("on");
-				} else {
-					$(".banner .num li").eq(i).addClass("on").siblings().removeClass("on");
-				}
-			}
+	if(i == size - 1) {
+		$(".banner .num li").eq(0).addClass("on").siblings().removeClass("on");
+	} else {
+		$(".banner .num li").eq(i).addClass("on").siblings().removeClass("on");
+	}
+}
